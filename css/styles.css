@@ -1,0 +1,56 @@
+/* Color Palette
+#1E3A8A - header
+#F59E0B - footer
+#F3F4F6 - work
+#10B981 - education
+#111827 - text
+*/
+
+/* Global */
+*, *::before, *::after { box-sizing: border-box; } /* Step 5a */
+body {
+  font-family: "Inter", sans-serif;
+  color: #111827;
+  margin: 0; /* Step 3d */
+}
+h1, h2, h3 { font-family: "Poppins", sans-serif; }
+h1 { font-size: 2.25rem; font-weight: 700; }
+h2 { font-size: 1.5rem; font-weight: 600; margin-top: 0; } /* Step 3c */
+
+/* Background colors */
+.site-header { background: #1E3A8A; color: #fff; }
+.work-experience { background: #F3F4F6; color: #111827; }
+.education { background: #10B981; color: #fff; }
+.site-footer { background: #F59E0B; color: #fff; text-align: center; } /* Step 3e */
+
+/* Content wrapper */
+.content-wrap {
+  max-width: 950px;      /* Step 2d */
+  margin: 0 auto;        /* Step 1b */
+  padding: 50px;         /* Step 3a */
+  overflow: hidden;      /* Step 4f */
+}
+
+/* Footer links */
+.contact-info a {
+  padding: 10px;         /* Step 3g */
+  display: inline-block;
+}
+
+/* Profile image */
+.profile-img {
+  border-radius: 50%;    /* Step 4c + 6f */
+}
+
+/* Columns */
+.column-narrow {
+  width: 30%;            /* Step 6d */
+  float: left;
+  padding-right: 3%;
+  min-height: 175px;
+}
+.column-wide {
+  width: 70%;            /* Step 6e */
+  float: left;
+  min-height: 225px;
+}
