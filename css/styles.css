@@ -20,8 +20,8 @@ h2 { font-size: 1.5rem; font-weight: 600; margin-top: 0; } /* Step 3c */
 /* Background colors */
 .site-header { background: #1E3A8A; color: #fff; }
 .work-experience { background: #F3F4F6; color: #111827; }
-.education { background: #10B981; color: #fff; }
-.site-footer { background: #F59E0B; color: #fff; text-align: center; } /* Step 3e */
+.education { background: #E8F5E9; color: #111827; }
+.site-footer { background: #1E3A8A; color: #fff; text-align: center; } /* Step 3e */
 
 /* Content wrapper */
 .content-wrap {
@@ -53,4 +53,69 @@ h2 { font-size: 1.5rem; font-weight: 600; margin-top: 0; } /* Step 3c */
   width: 70%;            /* Step 6e */
   float: left;
   min-height: 225px;
+}
+
+/* HW8 Additions */
+
+/* 1a–1d: Navigation menu (no list, fixed at top, section links, PDF download) */
+:root { --nav-h: 64px; }
+html { scroll-behavior: smooth; }
+body { padding-top: var(--nav-h); }
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-h);
+  background: #111827;
+  color: #fff;
+  z-index: 1000;
+}
+
+.top-nav .nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#about, #work, #education, #contact {
+  scroll-margin-top: var(--nav-h);
+}
+
+/* 2a: Font Awesome icons in footer */
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/* 3a: Background image + RGB/Alpha gradient on one section */
+.site-header {
+  background-image:
+    linear-gradient(rgba(30,58,138,0.6), rgba(30,58,138,0.9)),
+    url("../images/radiant.jpg");
+  background-size: cover;
+  background-position: center;
 }
